@@ -85,6 +85,20 @@ namespace Unit04.Game.Casting
         }
 
         /// <summary>
+        /// Moves the actor to its Down. Will wrap the position from one side of 
+        /// the screen to the other when it reaches the maximum y value.
+        /// </summary>
+        /// <param name="maxX">The maximum x value.</param>
+        /// <param name="maxY">The maximum y value.</param>
+        public void MoveDown(int maxX, int maxY)
+        {
+            
+            int x = (_position.GetX() + rndInt) % maxX;
+            int y = _position.GetY();
+            _position = new Point(x, y);
+        }
+
+        /// <summary>
         /// Sets the actor's color to the given value.
         /// </summary>
         /// <param name="color">The given color.</param>
