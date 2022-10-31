@@ -92,8 +92,8 @@ namespace Unit04.Game.Casting
         /// <param name="maxY">The maximum y value.</param>
         public void MoveDown(int maxX, int maxY)
         {
-            
-            int x = (_position.GetX() + rndInt) % maxX;
+            Random rnd = new Random();
+            int x = (_position.GetX() + rnd.Next(1,10)) % maxX;
             int y = _position.GetY();
             _position = new Point(x, y);
         }
