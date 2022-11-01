@@ -78,7 +78,6 @@ namespace Unit04
                 artifact.SetFontSize(FONT_SIZE);
                 artifact.SetColor(color);
                 artifact.SetPosition(position);
-                artifact.MoveDown(MAX_X, MAX_Y);
                 // artifact.SetMessage(message);
                 cast.AddActor("artifacts", artifact);
             }

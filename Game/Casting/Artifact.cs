@@ -34,5 +34,6 @@ namespace Unit04.Game.Casting{
         {
             _artifact = message;
         }
+        
     }
 }

@@ -16,7 +16,7 @@ namespace Unit04.Game.Casting
         private int _fontSize = 15;
         private Color _color = new Color(255, 255, 255); // white
         private Point _position = new Point(0, 0);
-        private Point _velocity = new Point(0, 100);
+        private Point _velocity = new Point(10, 100);
 
         /// <summary>
         /// Constructs a new instance of Actor.
@@ -94,7 +94,7 @@ namespace Unit04.Game.Casting
         {
             Random rnd = new Random();
             int x = ((_position.GetX() + _velocity.GetX()) + maxX) % maxX;
-            int y = ((_position.GetY() + _velocity.GetY()) + rnd.Next(10,100)) % maxY;
+            int y = ((_position.GetY() + _velocity.GetY()) + rnd.Next(10,100));
             _position = new Point(x, y);
         }
 
