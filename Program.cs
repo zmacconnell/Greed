@@ -59,8 +59,8 @@ namespace Unit04
             Random random = new Random();
             for (int i = 0; i < DEFAULT_ARTIFACTS; i++)
             {
-                string text = ((char)random.Next(33, 126)).ToString();
-                string message = messages[i];
+                // string text = ((char)random.Next(1, 3)).ToString();
+                // string message = messages[1];
 
                 int x = random.Next(1, COLS);
                 int y = random.Next(1, ROWS);
@@ -73,11 +73,13 @@ namespace Unit04
                 Color color = new Color(r, g, b);
 
                 Artifact artifact = new Artifact();
-                artifact.SetText(text);
+                artifact.SetText("O");
+                
                 artifact.SetFontSize(FONT_SIZE);
                 artifact.SetColor(color);
                 artifact.SetPosition(position);
-                artifact.SetMessage(message);
+                artifact.MoveDown(MAX_X, MAX_Y);
+                // artifact.SetMessage(message);
                 cast.AddActor("artifacts", artifact);
             }
 
