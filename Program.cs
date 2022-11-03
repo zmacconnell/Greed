@@ -91,7 +91,7 @@ namespace Unit04
                 Color color = new Color(r, g, b);
 
                 Artifact artifact = new Artifact();
-                artifact.SetText("x");
+                artifact.SetText("*");
                 
                 artifact.SetFontSize(FONT_SIZE);
                 artifact.SetColor(color);

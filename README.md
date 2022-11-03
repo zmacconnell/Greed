@@ -1,6 +1,6 @@
 # Greed
 One of the 7 deadly sins, Greed can get you in trouble. This game is all about
-balance between getting gems (x) and avoiding rocks (O). If you get a gem you
+balance between getting gems (*) and avoiding rocks (O). If you get a gem you
 earn 1 point, but get hit by a rock and you lose 3. How many point can you 
 gather? 
 

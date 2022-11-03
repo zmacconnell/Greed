@@ -31,7 +31,7 @@ namespace Unit04.Game.Casting
             {
                 _points = -3;
             }
-            else if (text == "x")
+            else if (text == "*")
             {
                 _points = 1;
             }
