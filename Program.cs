@@ -55,7 +55,7 @@ namespace Unit04
             // load the messages
             List<string> messages = File.ReadAllLines(DATA_PATH).ToList<string>();
 
-            // create the artifacts
+            // create the rocks
             Random random = new Random();
             for (int i = 0; i < DEFAULT_ARTIFACTS; i++)
             {
@@ -74,6 +74,29 @@ namespace Unit04
 
                 Artifact artifact = new Artifact();
                 artifact.SetText("O");
+                
+                artifact.SetFontSize(FONT_SIZE);
+                artifact.SetColor(color);
+                artifact.SetPosition(position);
+                // artifact.SetMessage(message);
+                cast.AddActor("artifacts", artifact);
+            }
+
+            // create the gems
+            for (int i = 0; i < DEFAULT_ARTIFACTS; i++)
+            {
+                int x = random.Next(1, COLS);
+                int y = random.Next(1, ROWS);
+                Point position = new Point(x, y);
+                position = position.Scale(CELL_SIZE);
+
+                int r = random.Next(0, 256);
+                int g = random.Next(0, 256);
+                int b = random.Next(0, 256);
+                Color color = new Color(r, g, b);
+
+                Artifact artifact = new Artifact();
+                artifact.SetText("x");
                 
                 artifact.SetFontSize(FONT_SIZE);
                 artifact.SetColor(color);

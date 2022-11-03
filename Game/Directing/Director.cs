@@ -71,6 +71,7 @@ namespace Unit04.Game.Directing
 
             foreach (Actor actor in artifacts)
             {
+                actor.MoveDown(maxX, maxY);
                 if (robot.GetPosition().Equals(actor.GetPosition()))
                 {
                     Artifact artifact = (Artifact) actor;

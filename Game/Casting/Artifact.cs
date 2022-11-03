@@ -1,4 +1,5 @@
-namespace Unit04.Game.Casting{
+namespace Unit04.Game.Casting
+{
         /// <summary>
         /// <para>An item of cultural or historical interest.</para>
         /// <para>
