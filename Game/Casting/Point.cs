@@ -44,6 +44,15 @@ namespace Unit04.Game.Casting
         {
             return this._x == other.GetX() && this._y == other.GetY();
         }
+        /// <summary>
+        /// Whether or not this Point is near to the given one.
+        /// </summary>
+        /// <param name="other">The point to compare.</param>
+        /// <returns>True if both x and y are equal; false if otherwise.</returns>
+        public bool NearProximity(Point other)
+        {
+            return (this._x >= other.GetX() - 3 && this._x <= other.GetX() + 3) && (this._y >= other.GetY() - 3 && this._y <= other.GetY() + 3);
+        }
 
         /// <summary>
         /// Gets the value of the x coordinate.

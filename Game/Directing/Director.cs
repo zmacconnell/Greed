@@ -80,6 +80,13 @@ namespace Unit04.Game.Directing
                     banner.SetText($"Total Points: {totalPoints}");
                     cast.RemoveActor("artifacts", artifact);
                 }
+                else if (robot.GetPosition().NearProximity(actor.GetPosition()))
+                {
+                    Artifact artifact = (Artifact) actor;
+                    totalPoints += artifact.GetPoints();
+                    banner.SetText($"Total Points: {totalPoints}");
+                    cast.RemoveActor("artifacts", artifact);
+                }
             } 
         }
 
