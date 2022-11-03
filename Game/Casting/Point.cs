@@ -51,7 +51,7 @@ namespace Unit04.Game.Casting
         /// <returns>True if both x and y are equal; false if otherwise.</returns>
         public bool NearProximity(Point other)
         {
-            return (this._x >= other.GetX() - 3 && this._x <= other.GetX() + 3) && (this._y >= other.GetY() - 3 && this._y <= other.GetY() + 3);
+            return (this._x >= other.GetX() - 5 && this._x <= other.GetX() + 5) && (this._y >= other.GetY() - 5 && this._y <= other.GetY() + 5);
         }
 
         /// <summary>
