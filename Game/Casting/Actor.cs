@@ -80,7 +80,6 @@ namespace Unit04.Game.Casting
         public void MoveNext(int maxX, int maxY)
         {
             int x = ((_position.GetX() + _velocity.GetX()) + maxX) % maxX;
-            // int y = ((_position.GetY() + _velocity.GetY()) + maxY) % maxY;
             int y = _position.GetY();
             _position = new Point(x, y);
         }
@@ -94,7 +93,6 @@ namespace Unit04.Game.Casting
         public void MoveDown(int maxX, int maxY)
         {
             Random rnd = new Random();
-            // int x = ((_position.GetX() + _velocity.GetX()) + maxX) % maxX;
             int x = _position.GetX();
             int y = (_position.GetY() + rnd.Next(1,10)) % maxY;
             _position = new Point(x, y);
