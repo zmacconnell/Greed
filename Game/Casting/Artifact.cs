@@ -9,6 +9,7 @@ namespace Unit04.Game.Casting
     class Artifact : Actor
     {
         private string _artifact;
+        private int _points = 0;
         /// <summary>
         /// Constructs a new instance of Artifact.
         /// </summary>
@@ -35,6 +36,18 @@ namespace Unit04.Game.Casting
         {
             _artifact = message;
         }
-        
+        public int GetPoints()
+        {
+            string text = GetText();
+            if (text == "O")
+            {
+                _points = -3;
+            }
+            else if (text == "x")
+            {
+                _points = 1;
+            }
+            return _points;
+        }
     }
 }

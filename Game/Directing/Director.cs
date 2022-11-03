@@ -76,7 +76,7 @@ namespace Unit04.Game.Directing
                 if (robot.GetPosition().Equals(actor.GetPosition()))
                 {
                     Artifact artifact = (Artifact) actor;
-                    totalPoints += artifact._points;
+                    totalPoints += artifact.GetPoints();
                     banner.SetText($"Total Points: {totalPoints}");
                     cast.RemoveActor("artifacts", artifact);
                 }

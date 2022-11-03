@@ -17,7 +17,6 @@ namespace Unit04.Game.Casting
         private Color _color = new Color(255, 255, 255); // white
         private Point _position = new Point(0, 0);
         private Point _velocity = new Point(0, 0);
-        public int _points = 0;
 
         /// <summary>
         /// Constructs a new instance of Actor.
@@ -81,7 +80,8 @@ namespace Unit04.Game.Casting
         public void MoveNext(int maxX, int maxY)
         {
             int x = ((_position.GetX() + _velocity.GetX()) + maxX) % maxX;
-            int y = ((_position.GetY() + _velocity.GetY()) + maxY) % maxY;
+            // int y = ((_position.GetY() + _velocity.GetY()) + maxY) % maxY;
+            int y = _position.GetY();
             _position = new Point(x, y);
         }
 
@@ -94,8 +94,9 @@ namespace Unit04.Game.Casting
         public void MoveDown(int maxX, int maxY)
         {
             Random rnd = new Random();
-            int x = ((_position.GetX() + _velocity.GetX()) + maxX) % maxX;
-            int y = (_position.GetY() + rnd.Next(1,10)) % maxY;
+            // int x = ((_position.GetX() + _velocity.GetX()) + maxX) % maxX;
+            int x = _position.GetX();
+            int y = (_position.GetY() + rnd.Next(1,2)) % maxY;
             _position = new Point(x, y);
         }
 
@@ -153,14 +154,6 @@ namespace Unit04.Game.Casting
             if (text == null)
             {
                 throw new ArgumentException("text can't be null");
-            }
-            if (text == "O")
-            {
-                _points = -3;
-            }
-            else if (text == "x")
-            {
-                _points = 1;
             }
             this._text = text;
         }
