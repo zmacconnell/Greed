@@ -96,7 +96,7 @@ namespace Unit04.Game.Casting
             Random rnd = new Random();
             // int x = ((_position.GetX() + _velocity.GetX()) + maxX) % maxX;
             int x = _position.GetX();
-            int y = (_position.GetY() + rnd.Next(1,2)) % maxY;
+            int y = (_position.GetY() + rnd.Next(1,10)) % maxY;
             _position = new Point(x, y);
         }
 
