@@ -73,14 +73,7 @@ namespace Unit04.Game.Directing
             foreach (Actor actor in artifacts)
             {
                 actor.MoveDown(maxX, maxY);
-                if (robot.GetPosition().Equals(actor.GetPosition()))
-                {
-                    Artifact artifact = (Artifact) actor;
-                    totalPoints += artifact.GetPoints();
-                    banner.SetText($"Total Points: {totalPoints}");
-                    cast.RemoveActor("artifacts", artifact);
-                }
-                else if (robot.GetPosition().NearProximity(actor.GetPosition()))
+                if (robot.GetPosition().NearProximity(actor.GetPosition()))
                 {
                     Artifact artifact = (Artifact) actor;
                     totalPoints += artifact.GetPoints();

@@ -1,9 +1,12 @@
+using System;
+
+
 namespace Unit04.Game.Casting
 {
         /// <summary>
-        /// <para>An item of cultural or historical interest.</para>
+        /// <para>A falling object.</para>
         /// <para>
-        /// The responsibility of an Artifact is to provide a message about itself.
+        /// The responsibility of an Artifact is to provide a score.
         /// </para>
         /// </summary>
     class Artifact : Actor
@@ -17,25 +20,10 @@ namespace Unit04.Game.Casting
         {
             _artifact = "artifact";
         }
-
-        /// <summary>
-        /// Gets the artifact's message.
-        /// </summary>
-        /// <returns>The message as a string.</returns>
-        public string GetMessage()
-        {
-            // Keep track of value; rocks are -1 and gems are 1
-            return _artifact;
-        }
         
         /// <summary>
-        /// Sets the artifact's message to the given value.
+        /// Gets the point value for an artifact, 1 for gems -3 for rocks
         /// </summary>
-        /// <param name="message">The given message.</param>
-        public void SetMessage(string message)
-        {
-            _artifact = message;
-        }
         public int GetPoints()
         {
             string text = GetText();
